@@ -168,7 +168,7 @@ def main():
     # 检查图标文件
     icon_dir = args.icons
     icon_paths = []
-    for filename in os.listdir(icon_dir):
+    for filename in sorted(os.listdir(icon_dir)):
         icon_paths.append(os.path.join(icon_dir, filename))
 
     # 处理图片
@@ -204,4 +204,7 @@ def main():
 
 
 if __name__ == "__main__":
+    '''
+    python3 main.py -i /mnt/d/Pictures/壁纸/赞妮/4k/1/img3 -o /mnt/d/Pictures/壁纸/赞妮/4k/1/img5 -H 100 -s 64 -f 40
+    '''
     main()
